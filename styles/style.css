@@ -1,0 +1,1282 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+*{
+    font-family: Segoe UI, sans-serif;
+}
+body{
+    margin-left: auto;
+    margin-right: auto;
+    margin: 0;
+    background-color: #333;
+}
+header {
+    background-color: #222;
+    position: relative;
+    color: #fff;
+    padding: 0 20px;
+}
+
+ul {
+    list-style: none;
+    color: white;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+p {
+    color: white;
+}
+#body__section {
+    overflow: hidden;
+}
+/* CSS */
+.button-48 {
+    appearance: none;
+    background-color: #FFFFFF;
+    border-width: 0;
+    box-sizing: border-box;
+    color: #000000;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Clarkson,Helvetica,sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 1em;
+    margin: 0;
+    opacity: 1;
+    outline: 0;
+    padding: 1.5em 2.2em;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    text-rendering: geometricprecision;
+    text-transform: uppercase;
+    transition: opacity 300ms cubic-bezier(.694, 0, 0.335, 1),background-color 100ms cubic-bezier(.694, 0, 0.335, 1),color 100ms cubic-bezier(.694, 0, 0.335, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    margin-top: auto;
+    vertical-align: baseline;
+    white-space: nowrap;
+    margin-top: auto;
+}
+
+.button-48:before {
+    animation: opacityFallbackOut .5s step-end forwards;
+    backface-visibility: hidden;
+    background-color: #EBEBEB;
+    clip-path: polygon(-1% 0, 0 0, -25% 100%, -1% 100%);
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transform: translateZ(0);
+    transition: clip-path .5s cubic-bezier(.165, 0.84, 0.44, 1), -webkit-clip-path .5s cubic-bezier(.165, 0.84, 0.44, 1);
+    width: 100%;
+}
+
+.button-48:hover:before {
+    animation: opacityFallbackIn 0s step-start forwards;
+    clip-path: polygon(0 0, 101% 0, 101% 101%, 0 101%);
+}
+
+.button-48:after {
+    background-color: #FFFFFF;
+}
+
+.button-48 span {
+    z-index: 1;
+    position: relative;
+}
+
+.text-background {
+    background: #007930;
+    color: white;
+    padding: 35px;
+    width: 325px;
+    height: 325px;
+    background-color: rgba(0, 121, 48, 0.7);
+    transform: rotate(-45deg);
+    border: solid 1rem white;
+    position: absolute;
+    z-index:1;
+}
+.text-background-rectangle {
+    background: #007930;
+    color: white;
+    padding: 35px;
+    width: 800px;
+    height: 325px;
+    background-color: rgba(0, 121, 48, 0.7);
+    position: absolute;
+    z-index:0;
+}
+.intro-heading{
+    font-size: 40px;
+    font-weight: 300;
+    color: white;
+    padding: 35px;
+    position: absolute;
+    z-index:2;
+}
+header nav {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.section-background-intro{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/img-0727-ava.jpg');
+    display: flex;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+nav a.logo, footer h3.logo {
+    color: #fff;
+    font-size: 35px;
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 60px;
+    cursor: pointer;
+    font-family: cursive;
+    float: left;
+    transition: .5s;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: .5s;
+    margin-right: 20px;
+}
+
+nav ul li {
+    line-height: 60px;
+    margin: 0 15px;
+}
+
+nav ul a {
+    color: #fff;
+    font-size: 25px;
+    transition: .5s;
+}
+
+.active,nav ul a:hover {
+    background: #007930;
+}
+nav > ul {
+    float: right;
+}
+nav > ul > li {
+    text-align: center;
+    line-height: 40px;
+    margin-left: 70px;
+}
+nav > ul li ul li {
+    width: 100%;
+    text-align: left;
+}
+nav ul li:hover {
+    cursor: pointer;
+    position: relative;
+}
+nav ul li:hover > ul {
+    display: block;
+}
+nav ul li:hover > a {
+    color: #777;
+}
+nav > ul > li > a {
+    cursor: pointer;
+    display: block;
+    outline: none;
+    width: 100%;
+    text-decoration: none;
+}
+nav > ul > li {
+    float: left;
+}
+nav a {
+    color: white;
+}
+nav > ul li ul {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    z-index: 2000;
+}
+nav > ul li ul li > a {
+    text-decoration: none;
+}
+[type="checkbox"],
+label {
+    display: none;
+}
+@media screen and (max-width: 768px) {
+    nav ul {
+        display: none;
+    }
+
+    label {
+        display: block;
+        background: #222;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        position: absolute;
+        right: 5px;
+        top: 10px;
+    }
+    label:after {
+        content: '';
+        display: block;
+        width: 30px;
+        height: 5px;
+        background: #777;
+        margin: 7px 5px;
+        box-shadow: 0px 10px 0px #777, 0px 20px 0px #777
+    }
+    [type="checkbox"]:checked ~ ul {
+        display: inline-block;
+        z-index: 9999;
+        position: absolute;
+        top: 40px;
+        left: 0;
+    }
+    nav a {
+        color: #777;
+    }
+    nav ul li {
+        display: inline-block;
+        float: none;
+        width: 100%;
+        text-align: left;
+        background: #222;
+        text-indent: 20px;
+    }
+    nav > ul > li {
+        margin-left: 0px;
+    }
+    nav > ul li ul li {
+        display: block;
+        float: none;
+    }
+    nav > ul li ul {
+        display: block;
+        position: relative;
+        width: 100%;
+        z-index: 9999;
+        float: none;
+    }
+    h1 {
+        font-size: 26px;
+    }
+}
+
+.nav-link{
+    margin: 20px;
+    padding: 20px;
+    text-decoration: none;
+    transition: 0.5s;
+}
+.nav-link:hover{
+    color: #007930;
+    transition: 0.5s;
+}
+
+.section-container {
+    background-position: 25% 25%;
+    display: flex;
+    margin-left: auto;
+    color: white;
+    margin-right: auto;
+    margin-bottom: 20px;
+    transition: 0.5s;
+}
+.left_container {
+    width: 52%;
+    padding: 35px;
+    background-color: rgba(0,0,0, 0.0);
+    transition: 0.5s;
+}
+.left_container_text {
+    width: 50%;
+    padding: 35px;
+    float: left;
+    transition: 0.5s;
+    animation: moving 2s ease-in-out forwards;
+}
+
+.section-container_cards {
+    background-color: rgb(137,200,189);
+    padding-right: 35px;
+    padding-left: 35px;
+    padding-top: 140px;
+    padding-bottom: 140px;
+    margin-left: auto;
+    color: white;
+    margin-right: auto;
+}
+.section-container_var {
+    background-color: #333;
+    padding: 22px;
+    display: flex;
+    margin-left: auto;
+    color: white;
+    margin-right: auto;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+}
+.left_container {
+    width: 60%;
+    padding: 35px;
+    float: left;
+}
+.section-container_university {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/230_3056.jpg');
+    background-position: 25% 25%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    margin-left: auto;
+    color: white;
+    margin-right: auto;
+    margin-bottom: 20px;
+    transition: 0.5s;
+}
+.left_container_university {
+    width: 50%;
+    padding: 35px;
+    background-color: rgba(196,82,38, 0.9);
+    clip-path: polygon(0 0, 100% 0, 70% 50%, 75% 50%, 50% 100%, 0 100%);
+    transition: 0.5s;
+    animation: moving 3s ease-in-out forwards;
+}
+.left_container_university_text {
+    width: 47%;
+    padding: 35px;
+    float: left;
+    transition: 0.5s;
+
+}
+.section-container_rock {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/Rock_Falcon_Eye_on_Protyatomu_Kaminny.jpg');
+    background-position: 55% 55%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    display: flex;
+    margin-left: auto;
+    margin-bottom: 20px;
+    transition: 0.5s;
+}
+.left_container_rock {
+    width: 50%;
+    padding: 35px;
+    background-color: rgba(154, 204, 91, 0.9);
+    clip-path: polygon(100% 0, 15% 0, 45% 100%, 100% 100%);
+    margin-left: auto;
+    transition: 0.5s;
+}
+.left_container_rock_text {0
+    width: 47%;
+    padding: 35px;
+    float: right;
+    margin-left: auto;
+    transition: 0.5s;
+}
+
+.section-container_castle {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../images/fortress-Khotyn.jpeg');
+    background-position: 25% 25%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    display: flex;
+    margin-left: auto;
+    transition: 0.5s;
+}
+.left_container_castle {
+    width: 50%;
+    padding: 35px;
+    background-color: rgba(154, 204, 91, 0.9);
+    clip-path: polygon(100% 0, 15% 0, 45% 100%, 100% 100%);
+    margin-left: auto;
+    transition: 0.5s;
+}
+.left_container_castle_text {
+    width: 47%;
+    padding: 35px;
+    float: right;
+    margin-left: auto;
+    transition: 0.5s;
+}
+.section-container_waterfall {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/YDrkMoJ2D4YJJDTKoKP1.jpg');
+    background-position: 75% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    transition: 0.5s;
+}
+
+.left_container_waterfall {
+    width: 50%;
+    padding: 35px;
+    background-color: rgba(0, 121, 48, 0.9);
+    clip-path: polygon(0 0, 100% 0, 60% 100%, 0 100%);
+    transition: 0.5s;
+    animation: moving 5s ease-in-out forwards;
+}
+.left_container_waterfall_text {
+    width: 47%;
+    padding: 35px;
+    float: left;
+    transition: 0.5s;
+}
+
+.section-container_pamir {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/rls_pamir_Karpaty.jpg');
+    background-position: 55% 55%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    display: flex;
+    margin-left: auto;
+    margin-bottom: 20px;
+    transition: 0.5s;
+}
+.left_container_pamir {
+    width: 50%;
+    padding: 35px;
+    background-color: rgba(108, 192, 106, 0.9);
+    clip-path: polygon(100% 0, 10% 0, 42% 100%, 100% 100%);
+    margin-left: auto;
+    transition: 0.5s;
+}
+.left_container_pamir_text {
+    width: 47%;
+    padding: 35px;
+    float: right;
+    margin-left: auto;
+    transition: 0.5s;
+}
+.section-container_theatre {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/Chernivtsi_Ukrainian_music-dramatic_theater_in_the_name_of_Olga_Kobylyanska.jpg');
+    background-position: 75% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    transition: 0.5s;
+}
+.left_container_theatre {
+    width: 50%;
+    padding: 35px;
+    background-color: rgba(155, 207, 124, 0.9);
+    clip-path: polygon(0 0, 80% 0, 65% 100%, 0 100%);
+    transition: 0.5s;
+    animation: moving 5s ease-in-out forwards;
+}
+.left_container_theatre_text {
+    width: 47%;
+    padding: 35px;
+    float: left;
+    transition: 0.5s;
+}
+
+.left_container_university_text p, .left_container_rock_text p, .left_container_text p, .left_container_castle_text p, .left_container_pamir_text p, .left_container_theatre_text p, .left_container_waterfall_text p{
+    font-size: 27px;
+}
+.left_container_university_text h2, .left_container_rock_text h2, .left_container_castle_text h2, .left_container_pamir_text h2, .left_container_theatre_text h2, .left_container_waterfall_text h2{
+    font-size: 50px;
+}
+
+.right_container {
+    width: 50%;
+    padding: 35px;
+    float: right;
+}
+footer{
+    padding: 25px;
+    background-color: #222222;
+    text-align: center;
+    color: white;
+    bottom: 0;
+    font-size: 20px;
+    margin-top: 100px;
+}
+footer * {
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+}
+.row {
+  padding: 1em 1em;
+}
+.row.primary {
+  display: grid;
+  grid-template-columns: 3fr 2fr 4fr;
+  align-items: stretch;
+}
+.column {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 2em;
+  min-height: 15em;
+}
+.row h3 {
+  width: 100%;
+  text-align: left;
+  color: white;
+  font-size: 1.4em;
+  white-space: nowrap;
+}
+.row ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  margin-right: auto;
+  margin-left: 20px;
+}
+.row li:not(:first-child) {
+  margin-top: 0.8em;
+}
+.row ul li a {
+  color: #a7a7a7;
+  text-decoration: none;
+}
+.row ul li a:hover {
+  color: rgb(154, 204, 91);
+}
+.about p {
+  text-align: justify;
+  line-height: 2;
+  margin: 0;
+}
+.row input,
+.row button {
+  font-size: 1em;
+  padding: 1em;
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+.row button {
+  background-color: green;
+  color: #ffffff;
+}
+.row div.social {
+  display: flex;
+  justify-content: space-around;
+  font-size: 2.4em;
+  flex-direction: row;
+  margin-top: 0.5em;
+}
+.social i {
+  color: #bac6d9;
+}
+footer hr {
+    height:1px;
+    background: #fff;
+    margin-bottom: 25px;
+    margin-left: 40px;
+    margin-right: 40px;
+    overflow: hidden;
+}
+
+p{
+    line-height: 150%;
+    text-align: justify;
+    font-weight: 250;
+    font-size: 18px;
+    color: white;
+    transition: 0.5s;
+}
+.cards{
+    display: flex;
+    justify-content: space-around;
+    gap: 25px;
+    overflow: hidden;
+    padding: 12px;
+    transition: 0.5s;
+}
+#museum {
+    position: relative;
+}
+
+.card{
+    position: relative;
+    padding: 25px;
+    border-radius: 20px;
+    width: 100%;
+    min-height: 20em;
+    transition: 0.5s;
+    overflow: hidden;
+    border: 1px solid rgb(137,200,189);
+}
+
+.cards #museum{
+    width: 100%;
+}
+.card > .card_button{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-left: 25px;
+    margin-bottom: 25px;
+}
+.card:hover{
+    background: radial-gradient(#007930, #00ad45);
+    transition: 0.5s;
+    border: 2px solid #000;
+    box-shadow: 0 0 12px 5px rgba(0, 130, 0, 0.9);
+}
+.card-paragraph, .card-title__inner{
+    padding: 5px;
+    width: 100%;
+}
+
+.card p{
+    font-size: 30px;
+    margin-bottom: 100px;
+}
+.card img{
+    width: 100%;
+}
+.card-title__inner{
+    text-align: center;
+    font-size: 40px;
+}
+.card-title__outer{
+    text-align: center;
+    font-size: 45px;
+}
+
+@media screen and (max-width: 850px) {
+  .row.primary {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Mobile portrait view */
+@media (min-width: 0px) and (max-width: 591px){
+    .text-background {
+        padding: 20px;
+        width: 100px;
+        height: 100px;
+        background-color: rgba(0, 121, 48, 0.7);
+    }
+    .text-background-rectangle {
+        padding: 20px;
+        width: 275px;
+        height: 150px;
+        background-color: rgba(0, 121, 48, 0.7);
+    }
+    .button-48 {
+      border-width: 0;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0;
+      line-height: 1em;
+      margin: 0;
+      outline: 0;
+      padding: 1em 2em;
+    }
+    .intro-heading{
+        font-size: 15px;
+        font-weight: 300;
+        padding: 30px;
+    }
+    nav a.logo, footer h3.logo {
+        color: #fff;
+        font-size: 18px;
+        line-height: 60px;
+        font-family: cursive;
+        float: left;
+    }
+    nav ul a {
+        font-size: 15px;
+        padding: 7px 15px;
+        border-radius: 4px;
+    }
+    .left_container_waterfall, .left_container_theatre {
+        width: 60%;
+        padding: 7px;
+    }
+    .left_container_university {
+        clip-path: polygon(0 0, 100% 0, 70% 50%, 75% 50%, 56% 100%, 0 100%);
+    }
+    .left_container_rock {
+        clip-path: polygon(100% 0, 15% 0, 40% 100%, 100% 100%);
+    }
+    .left_container_castle {
+        clip-path: polygon(100% 0, 15% 0, 38% 100%, 100% 100%);
+    }
+    .left_container_waterfall_text, .left_container_theatre_text {
+        width: 58%;
+        padding: 10px;
+    }
+    .left_container_university {
+        width: 60%;
+        padding: 7px;
+    }
+    .left_container_university_text {
+        width: 50%;
+        padding: 5px;
+        float: left;
+    }
+    .left_container_rock, .left_container_pamir {
+        width: 60%;
+        padding: 7px;
+        margin-left: auto;
+    }
+    .left_container_rock_text, .left_container_pamir_text {
+        width: 56%;
+        padding: 5px;
+        float: right;
+        margin-left: auto;
+    }
+    .left_container_castle {
+        width: 60%;
+        padding: 7px;
+    }
+    .left_container_castle_text {
+        width: 56%;
+        padding: 5px;
+        float: right;
+    }
+    .left_container_university_text p, .left_container_rock_text p, .left_container_text p, .left_container_castle_text p, .left_container_pamir_text p, .left_container_theatre_text p, .left_container_waterfall_text p{
+        font-size: 15px;
+    }
+    .left_container_university_text h2, .left_container_rock_text h2, .left_container_castle_text h2, .left_container_pamir_text h2, .left_container_theatre_text h2, .left_container_waterfall_text h2{
+        font-size: 23px;
+        width: 100%;
+    }
+    .left_container_text {
+        width: 100%;
+        padding: 10px;
+        transition: 0.5s;
+    }
+    .left_container {
+        width: 90%;
+        padding: 10px;
+        float: left;
+    }
+    .right_container {
+        width: 60%;
+        padding: 35px;
+    }
+    footer{
+        padding: 20px;
+        font-size: 18px;
+    }
+    p{
+        line-height: 150%;
+        font-weight: 250;
+        font-size: 14px;
+    }
+    .card p{
+        font-size: 15px;
+    }
+    .card-title__inner{
+        font-size: 20px;
+    }
+    .card-title__outer{
+        font-size: 25px;
+    }
+    .section-container_cards {
+        padding-right: 15px;
+        padding-left: 5px;
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+    .cards{
+        display: flex;
+        flex-direction: column;
+        padding: 4px;
+    }
+    .card{
+        padding: 2px;
+    }
+    .card > .card_button{
+        margin-left: 2px;
+        margin-bottom: 18px;
+    }
+}
+/* Mobile landscape view */
+@media (min-width: 592px) and (max-width: 770px){
+    .text-background {
+        padding: 28px;
+        width: 200px;
+        height: 200px;
+        background-color: rgba(0, 121, 48, 0.7);
+    }
+    .text-background-rectangle {
+        padding: 28px;
+        width: 500px;
+        height: 200px;
+        background-color: rgba(0, 121, 48, 0.7);
+    }
+    .button-48 {
+        border-width: 0;
+        font-size: 17px;
+        font-weight: 500;
+        letter-spacing: 0;
+        line-height: 1em;
+        margin: 0;
+        outline: 0;
+        padding: 1.5em 2.2em;
+    }
+    .intro-heading{
+        font-size: 34px;
+        font-weight: 300;
+        padding: 30px;
+    }
+    nav a.logo, footer h3.logo {
+        color: #fff;
+        font-size: 24px;
+        line-height: 60px;
+        font-family: cursive;
+        float: left;
+    }
+    nav ul a {
+        font-size: 20px;
+        padding: 7px 15px;
+        border-radius: 4px;
+    }
+    .left_container_waterfall, .left_container_theatre {
+        width: 53%;
+        padding: 20px;
+    }
+    .left_container_university {
+        clip-path: polygon(0 0, 100% 0, 70% 50%, 75% 50%, 53% 100%, 0 100%);
+    }
+    .left_container_rock {
+        clip-path: polygon(100% 0, 15% 0, 32% 100%, 100% 100%);
+    }
+    .left_container_castle {
+        clip-path: polygon(100% 0, 15% 0, 32% 100%, 100% 100%);
+    }
+    .left_container_waterfall_text, .left_container_theatre_text {
+        width: 49%;
+        padding: 28px;
+    }
+    .left_container_university {
+        width: 53%;
+        padding: 20px;
+    }
+    .left_container_university_text {
+        width: 49%;
+        padding: 28px;
+        float: left;
+    }
+    .left_container_rock, .left_container_pamir {
+        width: 54%;
+        padding: 20px;
+        margin-left: auto;
+    }
+    .left_container_rock_text, .left_container_pamir_text {
+        width: 50%;
+        padding: 28px;
+        float: right;
+        margin-left: auto;
+    }
+    .left_container_castle {
+        width: 54%;
+        padding: 20px;
+    }
+    .left_container_castle_text {
+        width: 50%;
+        padding: 28px;
+        float: right;
+    }
+    .left_container_university_text p, .left_container_rock_text p, .left_container_text p, .left_container_pamir_text p, .left_container_theatre_text p, .left_container_castle_text p, .left_container_waterfall_text p{
+        font-size: 18px;
+    }
+    .left_container_university_text h2, .left_container_rock_text h2, .left_container_pamir_text h2, .left_container_theatre_text h2, .left_container_castle_text h2, .left_container_waterfall_text h2{
+        font-size: 33px;
+        width: 80%;
+    }
+    .left_container_text {
+        width: 60%;
+        padding: 28px;
+        float: left;
+    }
+    .left_container {
+        width: 55%;
+        padding: 28px;
+        float: left;
+    }
+    .right_container {
+        width: 60%;
+        padding: 35px;
+    }
+    footer{
+        padding: 20px;
+        font-size: 18px;
+    }
+    p{
+        line-height: 150%;
+        font-weight: 250;
+        font-size: 15px;
+    }
+    .card p{
+        font-size: 20px;
+    }
+    .card-title__inner{
+        font-size: 29px;
+    }
+    .card-title__outer{
+        font-size: 35px;
+    }
+    .section-container_cards {
+        padding-right: 25px;
+        padding-left: 10px;
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+    .cards{
+        justify-content: space-around;
+        gap: 15px;
+        padding: 7px;
+    }
+    .card{
+        padding: 14px;
+    }
+    .card > .card_button{
+        margin-left: 14px;
+        margin-bottom: 14px;
+    }
+}
+/* Tablet view */
+@media (min-width: 771px) and (max-width: 1470px){
+    .text-background {
+        padding: 30px;
+        width: 275px;
+        height: 275px;
+        background-color: rgba(0, 121, 48, 0.7);
+    }
+    .text-background-rectangle {
+        padding: 30px;
+        width: 700px;
+        height: 275px;
+        background-color: rgba(0, 121, 48, 0.7);
+    }
+    .button-48 {
+      border-width: 0;
+      font-size: 17px;
+      font-weight: 500;
+      letter-spacing: 0;
+      line-height: 1em;
+      margin: 0;
+      outline: 0;
+      padding: 1.5em 2.2em;
+    }
+    .intro-heading{
+        font-size: 34px;
+        font-weight: 300;
+        padding: 30px;
+    }
+    nav a.logo, footer h3.logo {
+        color: #fff;
+        font-size: 24px;
+        line-height: 60px;
+        font-family: cursive;
+        float: left;
+    }
+    nav ul a {
+        font-size: 20px;
+        padding: 7px 15px;
+        border-radius: 4px;
+    }
+    .left_container_waterfall, .left_container_theatre {
+        width: 53%;
+        padding: 33px;
+    }
+    .left_container_university {
+        clip-path: polygon(0 0, 100% 0, 70% 50%, 75% 50%, 55% 100%, 0 100%);
+    }
+    .left_container_rock {
+        clip-path: polygon(100% 0, 15% 0, 40% 100%, 100% 100%);
+    }
+    .left_container_castle {
+        clip-path: polygon(100% 0, 15% 0, 40% 100%, 100% 100%);
+    }
+    .left_container_waterfall_text, .left_container_theatre_text {
+        width: 49%;
+        padding: 33px;
+    }
+    .left_container_university {
+        width: 53%;
+        padding: 33px;
+    }
+    .left_container_university_text {
+        width: 49%;
+        padding: 33px;
+        float: left;
+    }
+    .left_container_rock, .left_container_pamir {
+        width: 54%;
+        padding: 33px;
+        margin-left: auto;
+    }
+    .left_container_rock_text, .left_container_pamir_text {
+        width: 51%;
+        padding: 33px;
+        float: right;
+        margin-left: auto;
+    }
+    .left_container_castle {
+        width: 55%;
+        padding: 33px;
+    }
+    .left_container_castle_text {
+        width: 51%;
+        padding: 33px;
+        float: right;
+    }
+    .left_container_university_text p, .left_container_rock_text p, .left_container_text p, .left_container_castle_text p, .left_container_pamir_text p, .left_container_theatre_text p,  .left_container_waterfall_text p{
+        font-size: 22px;
+    }
+    .left_container_university_text h2, .left_container_rock_text h2, .left_container_castle_text h2, .left_container_pamir_text h2, .left_container_theatre_text h2, .left_container_waterfall_text h2{
+        font-size: 38px;
+    }
+    .left_container_text {
+        width: 49%;
+        padding: 33px;
+        float: left;
+    }
+    .left_container {
+        width: 53%;
+        padding: 33px;
+        float: left;
+    }
+    .right_container {
+        width: 60%;
+        padding: 35px;
+    }
+    footer{
+        padding: 25px;
+        font-size: 20px;
+    }
+    p{
+        line-height: 150%;
+        font-weight: 250;
+        font-size: 17px;
+    }
+    .card p{
+        font-size: 23px;
+    }
+    .card-title__inner{
+        font-size: 32px;
+    }
+    .card-title__outer{
+        font-size: 38px;
+    }
+    .section-container_cards {
+        padding-right: 30px;
+        padding-left: 28px;
+        padding-top: 130px;
+        padding-bottom: 130px;
+    }
+    .cards{
+        justify-content: space-around;
+        gap: 20px;
+        padding: 10px;
+    }
+    .card{
+        padding: 18px;
+    }
+    .card > .card_button{
+        margin-left: 18px;
+        margin-bottom: 18px;
+    }
+}
+/* Laptop view */
+@media (min-width: 1471px) {
+  .button-48 {
+      border-width: 0;
+      font-size: 20px;
+      font-weight: 500;
+      letter-spacing: 0;
+      line-height: 1em;
+      margin: 0;
+      opacity: 1;
+      outline: 0;
+      padding: 1.5em 2.2em;
+    }
+    .text-background {
+        padding: 35px;
+        width: 325px;
+        height: 325px;
+        background-color: rgba(0, 121, 48, 0.7);
+    }
+    .text-background-rectangle {
+        padding: 35px;
+        width: 800px;
+        height: 325px;
+        background-color: rgba(0, 121, 48, 0.7);
+    }
+    .intro-heading{
+        font-size: 40px;
+        font-weight: 300;
+        padding: 35px;
+    }
+    nav a.logo, footer h3.logo {
+        color: #fff;
+        font-size: 35px;
+        line-height: 60px;
+        font-family: cursive;
+        float: left;
+    }
+    nav ul a {
+        font-size: 25px;
+        padding: 7px 15px;
+        border-radius: 4px;
+    }
+    .left_container_waterfall, .left_container_theatre {
+        width: 50%;
+        padding: 35px;
+    }
+    .left_container_waterfall_text, .left_container_theatre_text {
+        width: 47%;
+        padding: 35px;
+    }
+    .left_container_university {
+        width: 50%;
+        padding: 35px;
+    }
+    .left_container_university_text {
+        width: 47%;
+        padding: 35px;
+        float: left;
+    }
+    .left_container_rock, .left_container_pamir {
+        width: 50%;
+        padding: 35px;
+        margin-left: auto;
+    }
+    .left_container_rock_text, .left_container_pamir_text {
+        width: 47%;
+        padding: 35px;
+        float: right;
+        margin-left: auto;
+    }
+    .left_container_castle {
+        width: 50%;
+        padding: 35px;
+    }
+    .left_container_castle_text {
+        width: 47%;
+        padding: 35px;
+        float: right;
+    }
+    .left_container_university_text p, .left_container_rock_text p, .left_container_text p, .left_container_castle_text p, .left_container_pamir_text p, .left_container_theatre_text p, .left_container_waterfall_text p{
+        font-size: 27px;
+    }
+    .left_container_university_text h2, .left_container_rock_text h2, .left_container_castle_text h2, .left_container_pamir_text h2, .left_container_theatre_text h2, .left_container_waterfall_text h2{
+        font-size: 50px;
+    }
+    .left_container_text {
+        width: 50%;
+        padding: 35px;
+        float: left;
+    }
+    .left_container {
+        width: 52%;
+        padding: 35px;
+        float: left;
+    }
+    .right_container {
+        width: 50%;
+        padding: 35px;
+    }
+    footer{
+        padding: 25px;
+        font-size: 20px;
+    }
+    p{
+        line-height: 150%;
+        font-weight: 250;
+        font-size: 18px;
+    }
+    .card p{
+        font-size: 30px;
+    }
+    .card-title__inner{
+        font-size: 40px;
+    }
+    .card-title__outer{
+        font-size: 45px;
+    }
+    .section-container_cards {
+        padding-right: 35px;
+        padding-left: 35px;
+        padding-top: 140px;
+        padding-bottom: 140px;
+    }
+    .left_container_university {
+        clip-path: polygon(0 0, 100% 0, 70% 50%, 75% 50%, 50% 100%, 0 100%);
+    }
+    .left_container_rock {
+        clip-path: polygon(100% 0, 15% 0, 45% 100%, 100% 100%);
+    }
+    .left_container_castle {
+        clip-path: polygon(100% 0, 15% 0, 45% 100%, 100% 100%);
+    }
+    .cards{
+        justify-content: space-around;
+        gap: 25px;
+        padding: 12px;
+    }
+    .card{
+        padding: 25px;
+    }
+    .card > .card_button{
+        margin-left: 25px;
+        margin-bottom: 25px;
+    }
+}
+
+@keyframes moving{
+
+    from{
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+        margin-left: 0;
+        opacity: 0;
+    }
+
+    to{
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        margin-left: 0;
+        opacity: 100%;
+
+    }
+}
